@@ -1,4 +1,6 @@
-/* Estilos básicos para o currículo */
+/* =================== ESTILOS GERAIS DO SITE =================== */
+
+/* ESTILOS DO CORPO DA PÁGINA */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,6 +10,9 @@ body {
     background-color: #f4f4f4;
 }
 
+/* =================== ESTILOS DO CABEÇALHO (HEADER) =================== */
+
+/* Estilos gerais do header */
 header {
     background-color: #007bff;
     color: white;
@@ -15,17 +20,21 @@ header {
     padding: 2rem;
 }
 
+/* Estilos do título h1 dentro do header */
 header h1 {
     margin: 0;
     font-size: 2.5rem;
 }
 
+/* Estilos do parágrafo dentro do header */
 header p {
     font-size: 1.2rem;
 }
+/* =================== ESTILOS DAS SEÇÕES (SOBRE, HABILIDADES, etc) =================== */
 
+/* Estilos gerais para cada seção */
 section {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 2rem auto;
     padding: 1rem;
     background-color: white;
@@ -33,26 +42,36 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Estilos dos títulos h2 das seções */
 section h2 {
     color: #007bff;
     border-bottom: 2px solid #007bff;
     padding-bottom: 0.5rem;
 }
 
+/* =================== ESTILOS DAS LISTAS =================== */
+
+/* Estilos de listas desordenadas */
 ul {
     list-style-type: disc;
     margin-left: 1rem;
 }
+/* =================== ESTILOS DOS ARTIGOS =================== */
 
+/* Estilos gerais dos articles (usado para experiências, educação, projetos) */
 article {
     margin-bottom: 1.5rem;
 }
 
+/* Estilos dos títulos h3 dentro dos articles */
 article h3 {
     margin: 0;
-    color: #555;
+    color: #555
 }
 
+/* =================== ESTILOS DO RODAPÉ (FOOTER) =================== */
+
+/* Estilos gerais do footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -60,13 +79,153 @@ footer {
     color: white;
 }
 
-/* Responsividade para mobile */
+/* =================== ESTILOS DO MENU DE NAVEGAÇÃO =================== */
+
+/* Estilos gerais da barra de navegação */
+.navbar {
+    background-color: #334455;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos da lista do menu */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos de cada item do menu */
+.nav-item {
+    position: relative;
+}
+
+/* Estilos dos links do menu */
+.nav-link {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos do link quando o mouse passa sobre ele */
+.nav-link:hover {
+    background-color: #007bff;
+}
+
+/* =================== ESTILOS DO MENU DROPDOWN =================== */
+
+/* Estilos do container de dropdown */
+.dropdown {
+    position: relative;  /
+}
+
+/* Estilos da lista do dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2a3d52;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    animation: slideDown 0.3s ease;
+}
+
+/* Mostra o dropdown quando o mouse passa sobre o .dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilos dos itens dentro do dropdown */
+.dropdown-menu li {
+    margin: 0;
+}
+
+/* Estilos dos links dentro do dropdown */
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Estilos do link do dropdown ao passar o mouse */
+.dropdown-menu a:hover {
+    background-color: #007bff;
+    padding-left: 2rem;
+    transition: padding-left 0.2s ease;
+}
+
+/* =================== ANIMAÇÃO DO DROPDOWN =================== */
+
+/* Define a animação "slideDown" que faz o dropdown descer com efeito */
+@keyframes slideDown {
+    /* Estado inicial (início da animação) */
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    /* Estado final (fim da animação) */
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================== RESPONSIVIDADE PARA TELAS PEQUENAS (MOBILE) =================== */
+
+/* =| Esta seção aplica estilos diferentes quando a tela tem até 768px de largura |= */
 @media (max-width: 768px) {
+    
     header h1 {
         font-size: 2rem;
     }
+    
+    /* Ajusta espaçamento das seções para telas pequenas */
     section {
         margin: 1rem;
         padding: 0.5rem;
+    }
+    
+    /* Muda orientação do menu para vertical em telas pequenas */
+    .nav-menu {
+        flex-direction: column;
+    }
+    
+    /* Faz cada item do menu ocupar 100% da largura */
+    .nav-item {
+        width: 100%;
+    }
+    
+    /* Centraliza o texto dos links do menu */
+    .nav-link {
+        text-align: center;
+    }
+    
+    /* Ajusta posicionamento do dropdown para mobile */
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background-color: #1f2d3a;
+    }
+    
+    /* Mostra dropdown ao passar mouse em telas pequenas */
+    .dropdown:hover .dropdown-menu {
+        display: block;
     }
 }

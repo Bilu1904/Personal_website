@@ -1,32 +1,65 @@
+<!-- Declara que este é um arquivo HTML5 -->
 <!DOCTYPE html>
+<!-- Define o idioma da página como Português Brasileiro -->
 <html lang="pt-BR">
 <head>
+    <!-- Define a codificação de caracteres como UTF-8 (suporta caracteres especiais) -->
     <meta charset="UTF-8">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título que aparece na aba do navegador -->
     <title>Meu Currículo - Personal Site</title>
     <link rel="stylesheet" href="Site.CSS">
 </head>
 <body>
+    <!-- CABEÇALHO DO SITE - Seção principal com nome e informações básicas -->
     <header>
-        <h1>Seu Nome Completo</h1>
-        <p>Desenvolvedor | Contato: seuemail@example.com | LinkedIn: linkedin.com/in/seuusuario</p>
+        <h1>Gabriel Calixto Gonzaga</h1>
+        <p>Desenvolvedor | Contato: gabrielcalixtogonzaga@gamil.com | LinkedIn: linkedin.com/in/seuusuario</p>
     </header>
 
+    <!-- MENU DE NAVEGAÇÃO COM DROPDOWN -->
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#sobre" class="nav-link">Sobre Mim</a>
+            </li>
+
+            <!-- TERCEIRO ITEM DO MENU: Projetos (link simples) -->
+            <li class="nav-item">
+                <a href="#projetos" class="nav-link">Projetos</a>
+            </li>
+
+            <!-- SEGUNDO ITEM DO MENU: Mais Informações (com dropdown) -->
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Mais informações </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#educacao">Educação</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- SEÇÃO SOBRE - id=\"sobre\" é usado pelo menu para navegar até aqui ao clicar -->
     <section id="sobre">
         <h2>Sobre Mim</h2>
-        <p>Uma breve descrição sobre você, suas paixões e objetivos profissionais.</p>
+        <p>Sou estudante universitário dedicado e em constante aprendizado, com interesse em desenvolver minhas habilidades profissionais e contribuir para o crescimento da empresa. Tenho facilidade em trabalhar em equipe, sou organizado, receptivo a conselhos e orientações, e estou sempre em busca de novos conhecimentos..</p>
     </section>
 
+    <!-- SEÇÃO HABILIDADES - id=\"habilidades\" é usado pelo menu dropdown para navegar -->
     <section id="habilidades">
         <h2>Habilidades</h2>
         <ul>
             <li>HTML/CSS</li>
-            <li>JavaScript</li>
+            <li>C++</li>
             <li>Python</li>
-            <li>Outras competências</li>
         </ul>
     </section>
 
+    <!-- SEÇÃO EXPERIÊNCIA - id=\"experiencia\" é usado pelo menu dropdown para navegar -->
     <section id="experiencia">
         <h2>Experiência Profissional</h2>
         <article>
@@ -34,9 +67,9 @@
             <p><em>Data de início - Data de fim</em></p>
             <p>Descrição das responsabilidades e conquistas.</p>
         </article>
-        <!-- Adicione mais artigos conforme necessário -->
     </section>
 
+    <!-- SEÇÃO EDUCAÇÃO - id=\"educacao\" é usado pelo menu dropdown para navegar -->
     <section id="educacao">
         <h2>Educação</h2>
         <article>
@@ -46,6 +79,7 @@
         </article>
     </section>
 
+    <!-- SEÇÃO PROJETOS - id=\"projetos\" é usado pelo menu para navegar até aqui -->
     <section id="projetos">
         <h2>Projetos</h2>
         <article>
@@ -54,10 +88,9 @@
         </article>
     </section>
 
+    <!-- RODAPÉ DO SITE - Informações de copyright -->
     <footer>
         <p>&copy; 2026 Seu Nome. Todos os direitos reservados.</p>
     </footer>
 </body>
-
-bil
 </html>
