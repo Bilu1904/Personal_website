@@ -1,19 +1,17 @@
  /* 8lt; ## &gt; */
 
-h1{
-    font-family: 'Times New Roman';
-    font-size: 32px
-}
- 
-hr{
-    height: 4px;
-    border-radius: 5px;
-    background-color: #000000;
+header h1{
+    font-size: 54px
 }
 
-header .logo{
+header{
     width: 100%;
-    max-width: 150px;
+}
+
+
+
+.logo{
+    max-width: 200px;
     min-width: 50px;
     height: auto;
     border-radius: 15%;
@@ -21,11 +19,142 @@ header .logo{
     box-shadow: 15px 12px 10px rgba(0, 0, 0, 0.5);
 }
 
+#Intro{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-content: center;
+    gap: 3%;
+
+    /*gap: clamp(10px, 2vw, 30px);*/
+}
+
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.intro-text h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+}
+
+.intro-text h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 0%;
+}
+
+
+
+.nav-container{
+    background-color: #231863;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 3px solid black;
+}
+
+.nav-container li {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 12px 20px;
+    margin: 10px 10px;
+}
+
+
+.nav-container li:first-child {
+    margin-right: auto;
+}
+
+
+.nav-container ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+}
+
+.nav-container nav {
+    display: flex;
+    align-items: center;
+}
+
+
+body{
+    background-color: rgb(223, 221, 221);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Times New Roman';
+}
+
+
+
 footer {
     background-color: #231863;
     width: 100%;
     color: #fff;
-    padding: 20px 0;
+    padding: 80px 0;
     text-align: center;
     margin-top: 40px;
+}
+
+
+main {
+    max-width: 1200px;     /* limite máximo */
+    margin: 0 auto;        /* centraliza */
+    padding: 20px;         /* distância das bordas do site */
+    display: flex;
+    flex-wrap: wrap;       /* permite quebra de linha */
+    gap: 20px;             /* espaço entre blocos */
+}
+
+
+.bloco-full {
+    flex-basis: 100%;
+}
+
+.content{
+    background-color: rgb(144, 144, 144);
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+
+article{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+article li{
+    font-size: 18px;
+}
+
+article p{
+    padding-left: 1%;
+    margin: 2px;
+    font-size: 16px;
+}
+
+article h3{
+    padding-left: 0.6%;
+    margin-bottom: 0.5%;
+    font-size: 22px;
+}
+
+#educacao blockquote{
+    font-size: 20px;
+    margin-top: 0.5%;
 }
